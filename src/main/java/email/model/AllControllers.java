@@ -15,17 +15,17 @@ public class AllControllers {
         return "index";
     }
 
-    @GetMapping("services/")
+    @GetMapping("/services/")
     public String services() {
         return "services";
     }
 
-    @GetMapping("price/")
+    @GetMapping("/price/")
     public String price() {
         return "price";
     }
 
-    @GetMapping("appointment/")
+    @GetMapping("/appointment/")
     public String appointment() {
         return "appointment";
     }
@@ -51,7 +51,7 @@ public class AllControllers {
         return "resultApp";
     }
 
-    @GetMapping("contacts/")
+    @GetMapping("/contacts/")
     public String contacts() {
         return "contacts";
     }
