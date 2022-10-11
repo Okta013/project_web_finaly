@@ -21,7 +21,9 @@ $(function(){
                 }
            })
 
+
             if(error==0){
+                alert("Ваше обращение принято!");
                 return true;
             }
             else{
@@ -32,6 +34,6 @@ $(function(){
             }
 
 
-
         })
     });
+
