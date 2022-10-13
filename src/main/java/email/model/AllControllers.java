@@ -15,24 +15,25 @@ public class AllControllers {
         return "index";
     }
 
-    @GetMapping("/services/")
+    @GetMapping("/services")
     public String services() {
         return "services";
     }
 
-    @GetMapping("/price/")
+    @GetMapping("/price")
     public String price() {
         return "price";
     }
 
-    @GetMapping("/appointment/")
-    public String appointment() {
+    @GetMapping("/appointment")
+    public String appointment(Model model) {
+        model.addAttribute("appointmentForm", new AppointmentForm());
         return "appointment";
     }
 
-    @PostMapping("/subscribe")
-    public String subscribe(@ModelAttribute AppointmentForm appointmentForm, Model model) {
-        if (appointmentForm.getSurname().isEmpty()) {
+    @PostMapping("/appointment")
+    public String appointment(@ModelAttribute AppointmentForm appointmentForm, Model model) {
+        /*if (appointmentForm.getSurname().isEmpty()) {
             model.addAttribute("error", " Поле 'Фамилия' не должно быть пустым");
             return "appointment";
         }
@@ -47,11 +48,12 @@ public class AllControllers {
         if (appointmentForm.getMessage().isEmpty()) {
             model.addAttribute("error", " Поле 'Текст обращения' не должно быть пустым");
             return "appointment";
-        }
+        }*/
+
         return "resultApp";
     }
 
-    @GetMapping("/contacts/")
+    @GetMapping("/contacts")
     public String contacts() {
         return "contacts";
     }
