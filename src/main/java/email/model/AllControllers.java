@@ -26,13 +26,14 @@ public class AllControllers {
     }
 
     @GetMapping("/appointment")
+
     public String appointment(Model model) {
         model.addAttribute("appointmentForm", new AppointmentForm());
         return "appointment";
     }
 
-    @PostMapping("/appointment")
-    public String appointment(@ModelAttribute AppointmentForm appointmentForm, Model model) {
+    @PostMapping("/subscribe")
+    public String subscribe(@ModelAttribute AppointmentForm appointmentForm, Model model) {
         /*if (appointmentForm.getSurname().isEmpty()) {
             model.addAttribute("error", " Поле 'Фамилия' не должно быть пустым");
             return "appointment";
